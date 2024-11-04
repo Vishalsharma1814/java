@@ -1,4 +1,4 @@
-package _1.ArrayAndStringManipulation.Duplicate_Element_In_Array;
+package _1_ArrayAndStringManipulation.Duplicate_Element_In_Array;
 
 import java.util.HashSet;
 import java.util.Scanner;

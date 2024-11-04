@@ -1,4 +1,4 @@
-package _1.ArrayAndStringManipulation.Reverse_A_String;
+package _1_ArrayAndStringManipulation.Reverse_A_String;
 
 import java.util.Scanner;
 

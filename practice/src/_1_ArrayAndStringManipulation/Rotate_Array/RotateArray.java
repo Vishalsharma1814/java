@@ -1,4 +1,4 @@
-package _1.ArrayAndStringManipulation.Rotate_Array;
+package _1_ArrayAndStringManipulation.Rotate_Array;
 
 import java.util.Scanner;
 
