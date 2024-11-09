@@ -1,9 +1,17 @@
 package _13_StreamApi;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Arrays;
 import java.util.List;
 
+@Data
 public class EmployeeDataBase {
+    public EmployeeDataBase() {
+    }
+
     public static List<Employee> getAllEmployees() {
         Project p1 = new Project("P001", "Alpha", "ABC Corp", "Alice");
         Project p2 = new Project("P002", "Beta", "XYZ Ltd", "Bob");
@@ -31,4 +39,4 @@ public class EmployeeDataBase {
         // Print employee details (just for testing)
         return Arrays.asList(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10);
     }
-        }
+}
