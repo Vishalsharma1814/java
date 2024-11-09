@@ -10,5 +10,6 @@ public class TestClass {
         while(e.hasNext()){
             System.out.println(e.next());
         }
+        System.out.println("test");
     }
 }
