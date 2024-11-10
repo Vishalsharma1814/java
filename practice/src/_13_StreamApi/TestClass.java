@@ -7,9 +7,9 @@ public class TestClass {
     public static void main(String[] args) {
         List<Employee> employees = EmployeeDataBase.getAllEmployees();
         Iterator e = employees.iterator();
-        while(e.hasNext()){
+        while (e.hasNext()) {
             System.out.println(e.next());
         }
-        System.out.println("test");
+        employees.stream().forEach(System.out::println);
     }
 }
