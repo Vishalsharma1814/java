@@ -1,6 +1,7 @@
 package _13_StreamApi;
 
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -61,5 +62,56 @@ public class TestClass {
         Optional<Employee> lowestPaidEmployee = employees.stream().min(Comparator.comparingDouble(Employee::getSalary));
         System.out.println(highestPaidEmployee);
         System.out.println(lowestPaidEmployee);
+
+        // grouping by
+        Map<String, List<Employee>> groups = employees.stream().collect(Collectors.groupingBy(Employee::getGender));
+        System.out.println(groups);
+
+        Map<String, List<String>> groupsWithName = employees.stream()
+                .collect(Collectors.groupingBy(Employee::getGender, Collectors.mapping(Employee::getName, Collectors.toList())));
+
+       Map<String, Long> deptWithCount =  employees.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.counting()));
+
+        System.out.println(groupsWithName);
+        System.out.println(deptWithCount);
+
+        //find first
+       Optional<Employee> maxSalaryFemale= employees.stream().filter(e-> e.getGender().equals("Female")).max(
+                Comparator.comparingDouble(Employee::getSalary)
+        );
+        Optional<Employee> maxSalaryFemale2= employees.stream().filter(e-> e.getGender().equals("Female")).sorted(
+                Comparator.comparingDouble(Employee::getSalary).reversed()
+        ).findFirst();
+        System.out.println(maxSalaryFemale);
+        System.out.println(maxSalaryFemale2);
+
+        Employee maxSalaryFemale3= employees.stream().filter(e-> e.getGender().equals("Female"))
+                .findFirst().orElseThrow(() -> new RuntimeException("No Female in the office"));
+
+        Employee findAnyFemale= employees.stream().filter(e-> e.getGender().equals("Female"))
+                .findAny().orElseThrow(() -> new RuntimeException("No Female in the office"));
+        System.out.println(findAnyFemale);
+
+        //anymatch allmatch nonematch
+
+        boolean anyFemaleExists = employees.stream().anyMatch(e -> e.getGender().equals("Female"));
+        System.out.println(anyFemaleExists);
+
+        boolean allFemale = employees.stream().allMatch(e -> e.getGender().equals("Male"));
+        System.out.println(allFemale);
+
+        boolean noneMale = employees.stream().noneMatch(e -> e.getGender().equals("Male"));
+        System.out.println(noneMale);
+
+        //limit
+        List<Employee> limitedEmployees = employees.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).limit(3).collect(Collectors.toList());
+
+        System.out.println(limitedEmployees);
+
+        // skip
+        List<Employee> limitedEmployeesWithSkip = employees.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).skip(3).limit(3).collect(Collectors.toList());
+
+        System.out.println(limitedEmployeesWithSkip);
+        
     }
 }
