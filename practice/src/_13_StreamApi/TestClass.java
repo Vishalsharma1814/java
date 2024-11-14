@@ -112,6 +112,8 @@ public class TestClass {
         List<Employee> limitedEmployeesWithSkip = employees.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).skip(3).limit(3).collect(Collectors.toList());
 
         System.out.println(limitedEmployeesWithSkip);
-        
+
+
+
     }
 }
