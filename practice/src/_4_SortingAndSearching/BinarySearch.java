@@ -28,7 +28,6 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         System.out.print("Please specify the size of array: ");
-
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int[] arr = new int[size];
