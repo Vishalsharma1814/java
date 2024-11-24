@@ -176,7 +176,137 @@ public class Assignment {
         System.out.println(highestPaidInDept);
 
 //        31. For each project, find the employees working on it.
-        Map<String, List<Project>> empsWithProjects = employeeList.stream().flatMap(e->e.getProjects().stream()).collect(Collectors.groupingBy(Project::getName));
+        Map<String, List<Employee>> employeesByProject = employeeList.stream().flatMap(employee -> employee.getProjects().stream() // Flatten the projects for each employee
+                        .map(project -> new ProjectEmployeePair(project.getName(), employee))) // Create a pair of project name and employee
+                .collect(Collectors.groupingBy(ProjectEmployeePair::getProjectName, Collectors.mapping(ProjectEmployeePair::getEmployee, Collectors.toList())));
 
+        System.out.println(employeesByProject);
+
+//        32. Filter the employees who work on projects for "ABC Corp" and have a salary above 70,000.
+        List<Integer> abcClientEmps = employeeList.stream().filter(e -> e.getProjects().stream().map(pr -> pr.getClient()).collect(Collectors.toList()).contains("ABC Corp")).map(Employee::getId).collect(Collectors.toList());
+        System.out.println(abcClientEmps);
+
+
+//        33. Find the total salary of all employees working in the "Development" department.
+//        34. Create a list of all project codes for employees whose salary is below 60,000.
+//        35. Identify the gender distribution in each department.
+//        36. Find the most frequently assigned project lead across all employees.
+//        37. Use peek() to log employee details while filtering those with salaries over 90,000.
+//        38. Find the top 2 departments with the highest number of employees.
+//        39. List all employees who are working on more than 2 projects.
+//        40. Generate a summary of salaries (count, sum, min, average, max) using Collectors.summarizingDouble().
+
+
+//        Category: filter()
+
+//        Find all employees in the "Development" department.
+//        List employees whose salary is greater than 80,000.
+//        Find all female employees working in the "Sales" department.
+//        Get a list of employees who are working on more than 2 projects.
+//        Find all employees who are working under a specific project leader, e.g., "Alice".
+
+//        Category: map()
+//        Create a list of employee names.
+//        Create a list of all project names across all employees.
+//        Map each employee to their department and salary as a formatted string (e.g., Development - $80,000).
+//        Convert the list of employees into a list of EmployeeDTO objects with only name and salary.
+//        Get the uppercase version of all employee names.
+
+//        Category: reduce()
+//        Calculate the total salary of all employees.
+//        Find the highest salary among employees.
+//        Calculate the sum of the length of all employee names.
+//        Concatenate all employee names into a single string, separated by commas.
+//        Find the minimum salary using reduce().
+
+
+//        Category: collect()
+//        Group employees by their department.
+//        Partition employees into two groups: those earning more than 75,000 and those earning less or equal.
+//        Create a map where the key is the department name, and the value is the list of employees in that department.
+//        Collect all unique project names into a Set.
+//        Create a Map with the employee's name as the key and the list of project names as the value.
+
+
+//        Category: sorted()
+//        Sort employees by their names in ascending order.
+//        Sort employees by their salary in descending order.
+//        Sort employees by department, and then by name within each department.
+//        Create a list of employees sorted by the number of projects they are working on.
+//        Sort projects alphabetically by their name.
+
+
+//        Category: flatMap()
+//        Get a list of all unique project names across all employees.
+//        Create a list of all project leaders' names from the projects of all employees.
+//        Find all clients for whom employees are working.
+//        List all project names paired with the employees working on them.
+//        Get a list of all project codes across all employees.
+
+
+//        Category: distinct()
+//        Find all unique department names.
+//        List all unique project names employees are working on.
+//        Get the distinct names of project leaders.
+//        Find all unique clients across all projects.
+//        Get a distinct list of salaries of employees.
+
+
+//        Category: anyMatch() / allMatch() / noneMatch()
+//        Check if any employee is earning more than 1,00,000.
+//        Verify if all employees in the "Finance" department are earning more than 50,000.
+//        Check if no employee in the "HR" department earns less than 40,000.
+//        Verify if any employee is working on a project with the name "Alpha".
+//        Check if all employees have at least one project assigned to them.
+
+
+//        Category: count()
+//        Count the number of employees in the "Development" department.
+//        Find the total number of employees earning more than 75,000.
+//        Count the number of projects led by "Alice".
+//        Calculate the number of employees who are working in the "Marketing" department.
+//        Count the number of unique departments in the company.
+
+
+//        Category: findFirst() / findAny()
+//        Find the first employee in the "Sales" department.
+//        Get any employee earning more than 90,000.
+//        Find the first employee whose name starts with "J".
+//        Retrieve any employee who is working on the "Zeta" project.
+//        Get the first employee in the sorted list by salary.
+
+//        Category: Advanced Combination
+//        (filter + map): Find the names of employees who are earning more than 80,000.
+//        (flatMap + filter): List the names of employees working on projects led by "Alice".
+//        (collect + groupingBy): Group projects by their client and list all projects under each client.
+//        (reduce + map): Calculate the total length of all employee names.
+//        (filter + distinct + collect): Find all unique project leaders for projects worked on by employees in the "Development" department.
+
+
+//        Category: Miscellaneous
+//        Create a comma-separated string of all employee names.
+//        Find the employee(s) with the second-highest salary.
+//        Get a list of all employees grouped by the first letter of their names.
+//        Create a Map where the key is the employee ID, and the value is their total number of projects.
+//        Calculate the average salary of employees in each department.
+
+    }
+
+    static class ProjectEmployeePair {
+        private String projectName;
+        private Employee employee;
+
+        public ProjectEmployeePair(String projectName, Employee employee) {
+            this.projectName = projectName;
+            this.employee = employee;
+        }
+
+        public String getProjectName() {
+            return projectName;
+        }
+
+        public Employee getEmployee() {
+            return employee;
+        }
     }
 }
