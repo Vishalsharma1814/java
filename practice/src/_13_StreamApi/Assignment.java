@@ -199,6 +199,13 @@ public class Assignment {
 
         System.out.println(projectCodes);
 //        35. Identify the gender distribution in each department.
+        Map<String, Map<String, Long>> genderDistributionByDepartment = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getDept,
+                        Collectors.groupingBy(Employee::getGender, Collectors.counting())));
+
+        System.out.println(genderDistributionByDepartment);
+
+        
 //        36. Find the most frequently assigned project lead across all employees.
 //        37. Use peek() to log employee details while filtering those with salaries over 90,000.
 //        38. Find the top 2 departments with the highest number of employees.
