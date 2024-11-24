@@ -192,7 +192,12 @@ public class Assignment {
         double totalSalaryInDev = employeeList.stream().filter(emp -> emp.getDept().equals("Development")).map(em -> em.getSalary()).reduce(0.00, Double::sum);
 
         System.out.println(totalSalaryInDev);
+
 //        34. Create a list of all project codes for employees whose salary is below 60,000.
+
+        List<String> projectCodes = employeeList.stream().filter(e-> e.getSalary() > 60000).flatMap(p -> p.getProjects().stream()).map(pr-> pr.getProjectCode()).collect(Collectors.toList());
+
+        System.out.println(projectCodes);
 //        35. Identify the gender distribution in each department.
 //        36. Find the most frequently assigned project lead across all employees.
 //        37. Use peek() to log employee details while filtering those with salaries over 90,000.
