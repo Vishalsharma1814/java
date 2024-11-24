@@ -188,6 +188,10 @@ public class Assignment {
 
 
 //        33. Find the total salary of all employees working in the "Development" department.
+
+        double totalSalaryInDev = employeeList.stream().filter(emp -> emp.getDept().equals("Development")).map(em -> em.getSalary()).reduce(0.00, Double::sum);
+
+        System.out.println(totalSalaryInDev);
 //        34. Create a list of all project codes for employees whose salary is below 60,000.
 //        35. Identify the gender distribution in each department.
 //        36. Find the most frequently assigned project lead across all employees.
