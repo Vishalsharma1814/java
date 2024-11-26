@@ -214,6 +214,10 @@ public class Assignment {
                 .orElse(null);
         System.out.println(mostFrequentName);
 //        37. Use peek() to log employee details while filtering those with salaries over 90,000.
+
+     List<Employee> filteredEmps =    employeeList.stream().filter(e -> e.getSalary() > 90000).peek(emp -> System.out.println("After filter: "+ emp)).collect(Collectors.toList());
+
+        System.out.println(filteredEmps);
 //        38. Find the top 2 departments with the highest number of employees.
 //        39. List all employees who are working on more than 2 projects.
 //        40. Generate a summary of salaries (count, sum, min, average, max) using Collectors.summarizingDouble().
