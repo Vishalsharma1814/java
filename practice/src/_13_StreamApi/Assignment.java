@@ -195,18 +195,24 @@ public class Assignment {
 
 //        34. Create a list of all project codes for employees whose salary is below 60,000.
 
-        List<String> projectCodes = employeeList.stream().filter(e-> e.getSalary() > 60000).flatMap(p -> p.getProjects().stream()).map(pr-> pr.getProjectCode()).collect(Collectors.toList());
+        List<String> projectCodes = employeeList.stream().filter(e -> e.getSalary() > 60000).flatMap(p -> p.getProjects().stream()).map(pr -> pr.getProjectCode()).collect(Collectors.toList());
 
         System.out.println(projectCodes);
 //        35. Identify the gender distribution in each department.
-        Map<String, Map<String, Long>> genderDistributionByDepartment = employeeList.stream()
-                .collect(Collectors.groupingBy(Employee::getDept,
-                        Collectors.groupingBy(Employee::getGender, Collectors.counting())));
+        Map<String, Map<String, Long>> genderDistributionByDepartment = employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.groupingBy(Employee::getGender, Collectors.counting())));
 
         System.out.println(genderDistributionByDepartment);
 
-        
+
 //        36. Find the most frequently assigned project lead across all employees.
+
+        List<String> projectLeads = employeeList.stream().flatMap(e -> e.getProjects().stream().map(pr -> pr.getBuLeadName())).collect(Collectors.toList());
+        String mostFrequentName = projectLeads.stream().collect(Collectors.groupingBy(name -> name, Collectors.counting())) // Group by name and count occurrences
+                .entrySet().stream() // Convert the map to a stream
+                .max(Map.Entry.comparingByValue()) // Find the entry with the maximum value (occurrences)
+                .map(Map.Entry::getKey) // Get the key (name) of the entry
+                .orElse(null);
+        System.out.println(mostFrequentName);
 //        37. Use peek() to log employee details while filtering those with salaries over 90,000.
 //        38. Find the top 2 departments with the highest number of employees.
 //        39. List all employees who are working on more than 2 projects.
