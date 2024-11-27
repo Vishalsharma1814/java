@@ -311,6 +311,8 @@ public class Assignment {
 
 //        Category: Miscellaneous
 //        Create a comma-separated string of all employee names.
+        System.out.println(employeeList.stream().map(e -> e.getName()).collect(Collectors.joining(", ")));
+        
 //        Find the employee(s) with the second-highest salary.
 //        Get a list of all employees grouped by the first letter of their names.
 //        Create a Map where the key is the employee ID, and the value is their total number of projects.
@@ -335,4 +337,49 @@ public class Assignment {
             return employee;
         }
     }
+
+//
+//    Week 1-2: Core Java
+//
+// - Basic Syntax: Data types, operators, loops (for, while, do-while)
+//            - OOP Concepts: Classes, objects, inheritance, polymorphism, encapsulation, abstraction
+// - Collections Framework: List, Set, Map, Queue, Iterator, etc.
+// - Exception Handling: Try-catch, custom exceptions, multi-catch
+//            - File I/O: Reading/writing files using java.io and java.nio
+// - Java 8+ Features: Lambdas, Streams, Optional, Functional Interfaces
+// - Multithreading: Threads, Runnable, ExecutorService, Future, and basic synchronization
+//
+//    Week 3-4: Advanced Java & JDBC
+//
+// - JVM Internals: ClassLoader, JIT, memory management, garbage collection
+// - Generics: Usage and wildcards
+// - Design Patterns: Singleton, Factory, Strategy, Observer, Dependency Injection (Intro)
+// - JDBC: Connecting with databases (CRUD operations), PreparedStatement, Connection pooling
+//
+//    Week 5-6: Spring Framework (Basics)
+//
+// - Spring Core
+// - Dependency Injection (DI) and Inversion of Control (IoC)
+//            - Beans, Scopes, and Bean Life Cycle
+// - Autowiring and Spring Annotations
+// - Spring AOP: Aspect-Oriented Programming fundamentals
+// - Spring Data JPA: Basic CRUD operations with JPA
+// - Entities, Repositories, and Custom Queries
+//
+//    Week 7: Spring Boot (Basics)
+//
+// - Spring Boot Fundamentals: Understanding the Spring Boot architecture
+// - REST API creation
+// - Spring Boot Annotations (@RestController, @RequestMapping, etc.)
+// - Running a Spring Boot application
+// - Spring Boot Auto Configuration: Application properties and profiles
+// - Spring Boot with Database: Integrate Spring Boot with MySQL using Spring Data JPA
+//
+//    Week 8: Spring Boot (Advanced)
+//
+// - Security: Introduction to Spring Security (Basic Authentication)
+// - Advanced Spring Boot Features: Exception handling (@ControllerAdvice)
+// - Logging with Spring Boot
+// - Pagination and Sorting
+// - Testing: Write unit tests using JUnit and Mockito in Spring Boot
 }
