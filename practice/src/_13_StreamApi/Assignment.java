@@ -1,6 +1,7 @@
 package _13_StreamApi;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -163,11 +164,9 @@ public class Assignment {
 
 //        29. Find the department with the highest total salary.
 
-        Map<String, Double> deptAndSalary = employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.summingDouble(e -> e.getSalary())));
+        Optional<Map.Entry<String, Double>> deptAndSalary = employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.summingDouble(e -> e.getSalary()))).entrySet().stream().max(Comparator.comparingDouble(e -> e.getValue()));
 
-        Optional<Map.Entry<String, Double>> maxSalaryDept = deptAndSalary.entrySet().stream().max(Map.Entry.comparingByValue());
-
-        System.out.println(maxSalaryDept);
+        System.out.println(deptAndSalary);
 
 //        30. For each department, list the highest-paid employee.
 
@@ -215,7 +214,7 @@ public class Assignment {
         System.out.println(mostFrequentName);
 //        37. Use peek() to log employee details while filtering those with salaries over 90,000.
 
-     List<Employee> filteredEmps =    employeeList.stream().filter(e -> e.getSalary() > 90000).peek(emp -> System.out.println("After filter: "+ emp)).collect(Collectors.toList());
+        List<Employee> filteredEmps = employeeList.stream().filter(e -> e.getSalary() > 90000).peek(emp -> System.out.println("After filter: " + emp)).collect(Collectors.toList());
 
         System.out.println(filteredEmps);
 //        38. Find the top 2 departments with the highest number of employees.
@@ -312,8 +311,11 @@ public class Assignment {
 //        Category: Miscellaneous
 //        Create a comma-separated string of all employee names.
         System.out.println(employeeList.stream().map(e -> e.getName()).collect(Collectors.joining(", ")));
-        
+
 //        Find the employee(s) with the second-highest salary.
+        List<Employee> se = employeeList.stream().sorted(Collections.reverseOrder(Comparator.comparingDouble(Employee::getSalary))).skip(1).limit(1).collect(Collectors.toList());
+
+        System.out.println(se);
 //        Get a list of all employees grouped by the first letter of their names.
 //        Create a Map where the key is the employee ID, and the value is their total number of projects.
 //        Calculate the average salary of employees in each department.
@@ -382,4 +384,9 @@ public class Assignment {
 // - Logging with Spring Boot
 // - Pagination and Sorting
 // - Testing: Write unit tests using JUnit and Mockito in Spring Boot
+
+    public static void firstNonRepeatedChar(String input) {
+        String a = Arrays.stream(input.split("")).map(e -> e.toLowerCase()).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting())).entrySet().stream().filter(e -> e.getValue() == 1).findFirst().get().getKey();
+        System.out.println(a);
+    }
 }
