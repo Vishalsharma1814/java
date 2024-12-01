@@ -1,0 +1,83 @@
+1. Control Structures & Loops
+Print patterns: Pyramid pattern, Floyd’s triangle, Pascal’s triangle.
+Fibonacci series.
+Prime number check.
+Palindrome check (number and string).
+Factorial of a number.
+Armstrong number check.
+Reverse a number.
+Sum of digits of a number.
+Greatest Common Divisor (GCD) and Least Common Multiple (LCM).
+
+
+2. Arrays
+Find the largest and smallest element in an array.
+Sort an array (Bubble, Selection, Insertion sort).
+Find the second largest element in an array.
+Reverse an array.
+Find duplicates in an array.
+Rotate an array (left/right).
+Find the missing number in a given array.
+Merge two sorted arrays.
+
+
+3. Strings
+Reverse a string.
+Check if two strings are anagrams.
+Count vowels and consonants in a string.
+Find the first non-repeating character in a string.
+Check if a string is a palindrome.
+Remove duplicates from a string.
+Count occurrences of a character in a string.
+Check if a string contains only digits.
+
+
+4. Object-Oriented Concepts
+Create a class and demonstrate inheritance, polymorphism, and encapsulation.
+Overload and override methods.
+Create and use an interface.
+Use abstract classes and methods.
+Implement a Singleton design pattern.
+Implement a simple factory design pattern.
+
+
+5. Collections & Generics
+Use ArrayList, LinkedList, and HashMap.
+Sort a list using Collections.sort().
+Find duplicates in a list using HashSet.
+Iterate over a HashMap.
+Custom sorting with Comparator and Comparable.
+
+
+6. Recursion
+Find factorial using recursion.
+Fibonacci series using recursion.
+Tower of Hanoi problem.
+Reverse a string using recursion.
+Sum of digits using recursion.
+
+
+7. File Handling
+Read from and write to a file.
+Count the number of words in a file.
+Copy content from one file to another.
+8. Exception Handling
+Handle checked and unchecked exceptions.
+Create custom exceptions.
+Use try-catch-finally blocks.
+Use multiple catch blocks.
+
+
+9. Multithreading
+Create a thread by extending Thread class and implementing Runnable interface.
+Use synchronization to avoid race conditions.
+Create a producer-consumer problem.
+Thread communication using wait() and notify().
+
+
+10. Java 8 Features
+Use lambda expressions.
+Stream API operations (filter, map, collect).
+Use Optional to handle null values.
+Functional interfaces like Predicate, Function, and Consumer.
+Method references.
