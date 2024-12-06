@@ -20,16 +20,20 @@ public class Assignment {
 
         System.out.println(developmentEmployees);
 
+//        employeeList.stream().filter(e -> e.getDept().equals("Development")).collect(Collectors.toList());
+
 //        3. Find the first employee who earns more than 80,000 using findFirst().
         Optional<Employee> firstEmployee = employeeList.stream().filter(e -> e.getSalary() > 80000).collect(Collectors.toList()).stream().findFirst();
 
         System.out.println(firstEmployee);
+        employeeList.stream().filter(e -> e.getSalary() > 80000).collect(Collectors.toList()).stream().findFirst();
 
 //        Intermediate Operations
 //        4. Extract a list of all unique project names from the employee list using flatMap() and distinct().
 
         List<String> projects = employeeList.stream().flatMap(e -> e.getProjects().stream().map(p -> p.getName())).distinct().collect(Collectors.toList());
 
+        employeeList.stream().flatMap(e -> e.getProjects().stream().map(p -> p.getName())).distinct().collect(Collectors.toList());
         System.out.println(projects);
 
 //        5. Get a list of employees whose name starts with "J".
@@ -113,11 +117,21 @@ public class Assignment {
         System.out.println(names);
 
 //        20. Create a map where the key is the department and the value is a list of employees in that department.
+
+        employeeList.stream().collect(Collectors.groupingBy(Employee:: getDept, Collectors.toList()));
+
+
+
+
         Map<String, List<Employee>> deptEmps = employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.toList()));
 
         System.out.println(deptEmps);
 
 //        21. Create a map where the key is the employee's name and the value is the number of projects they are working on.
+        employeeList.stream().collect(Collectors.toMap(Employee::getName, e -> e.getProjects().stream().count()));
+
+
+
         Map<String, Integer> nameAndProject = employeeList.stream().collect(Collectors.toMap(Employee::getName, e -> e.getProjects().size()));
 
         System.out.println(nameAndProject);

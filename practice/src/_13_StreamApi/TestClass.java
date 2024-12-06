@@ -1,6 +1,7 @@
 package _13_StreamApi;
 
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -130,5 +131,14 @@ public class TestClass {
 
         name = nameArr[1]+" "+ nameArr[0];
         System.out.println(name);
+
+        int[] original = {1, 2, 3};
+        Arrays.stream(original).forEach(System.out::println);
+
+        Runnable task = () -> System.out.println("jewe ");
+        task.run();
+
+        Predicate<Employee> p = (employeeList) -> employeeList.getProjects().stream().count() > 10;
+        p.test(employees.get(0));
     }
 }

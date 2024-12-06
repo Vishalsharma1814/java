@@ -2,7 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55808841-07ae-49f7-8aab-1df6292be405" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/src/_12_JavaBasics/multithreading/basicThread/ThreadByClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/src/_12_JavaBasics/multithreading/basicThread/ThreadByInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/practice/src/_12_JavaBasics/multithreading/basicThread/ThreadMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/java/com/kafkaPractice/cab_book_driver/CabBookDriverApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/java/com/kafkaPractice/cab_book_driver/config/KafkaConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/java/com/kafkaPractice/cab_book_driver/constants/AppConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/java/com/kafkaPractice/cab_book_driver/controller/CabLocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/java/com/kafkaPractice/cab_book_driver/service/CabLocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-driver/cab-book-driver/src/test/java/com/kafkaPractice/cab_book_driver/CabBookDriverApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/src/main/java/com/kafkaPractice/cab_book_passenger/CabBookPassengerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/src/main/java/com/kafkaPractice/cab_book_passenger/service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kafka/cab-book-passenger/cab-book-passenger/src/test/java/com/kafkaPractice/cab_book_passenger/CabBookPassengerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/Assignment$ProjectEmployeePair.class" beforeDir="false" afterPath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/Assignment$ProjectEmployeePair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/Assignment.class" beforeDir="false" afterPath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/Assignment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/TestClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/practice/out/production/practice/_13_StreamApi/TestClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/_12_JavaBasics/singleton/SingletonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/_12_JavaBasics/singleton/SingletonClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/_13_StreamApi/Assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/_13_StreamApi/Assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/src/_13_StreamApi/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/practice/src/_13_StreamApi/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
