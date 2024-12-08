@@ -118,9 +118,7 @@ public class Assignment {
 
 //        20. Create a map where the key is the department and the value is a list of employees in that department.
 
-        employeeList.stream().collect(Collectors.groupingBy(Employee:: getDept, Collectors.toList()));
-
-
+        employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.toList()));
 
 
         Map<String, List<Employee>> deptEmps = employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.toList()));
@@ -129,7 +127,6 @@ public class Assignment {
 
 //        21. Create a map where the key is the employee's name and the value is the number of projects they are working on.
         employeeList.stream().collect(Collectors.toMap(Employee::getName, e -> e.getProjects().stream().count()));
-
 
 
         Map<String, Integer> nameAndProject = employeeList.stream().collect(Collectors.toMap(Employee::getName, e -> e.getProjects().size()));

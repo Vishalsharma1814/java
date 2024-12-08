@@ -32,6 +32,7 @@ Count occurrences of a character in a string.
 Check if a string contains only digits.
 
 
+
 4. Object-Oriented Concepts
 Create a class and demonstrate inheritance, polymorphism, and encapsulation.
 Overload and override methods.
@@ -48,14 +49,12 @@ Find duplicates in a list using HashSet.
 Iterate over a HashMap.
 Custom sorting with Comparator and Comparable.
 
-
 6. Recursion
 Find factorial using recursion.
 Fibonacci series using recursion.
 Tower of Hanoi problem.
 Reverse a string using recursion.
 Sum of digits using recursion.
-
 
 7. File Handling
 Read from and write to a file.
@@ -68,13 +67,11 @@ Create custom exceptions.
 Use try-catch-finally blocks.
 Use multiple catch blocks.
 
-
 9. Multithreading
 Create a thread by extending Thread class and implementing Runnable interface.
 Use synchronization to avoid race conditions.
 Create a producer-consumer problem.
 Thread communication using wait() and notify().
-
 
 10. Java 8 Features
 Use lambda expressions.
