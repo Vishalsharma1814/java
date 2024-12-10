@@ -236,6 +236,7 @@ public class Assignment {
 //        Category: filter()
 
 //        Find all employees in the "Development" department.
+        employeeList.stream().filter(e -> e.getDept().equals("Development")).forEach(System.out::println);
 //        List employees whose salary is greater than 80,000.
 //        Find all female employees working in the "Sales" department.
 //        Get a list of employees who are working on more than 2 projects.
@@ -317,20 +318,24 @@ public class Assignment {
 //        (collect + groupingBy): Group projects by their client and list all projects under each client.
 //        (reduce + map): Calculate the total length of all employee names.
 //        (filter + distinct + collect): Find all unique project leaders for projects worked on by employees in the "Development" department.
+        System.out.println(employeeList.stream().filter(e-> e.getDept().equals("Development")).flatMap(emp -> emp.getProjects().stream().map(p -> p.getBuLeadName())).distinct().collect(Collectors.toList()));
 
 
 //        Category: Miscellaneous
 //        Create a comma-separated string of all employee names.
-        System.out.println(employeeList.stream().map(e -> e.getName()).collect(Collectors.joining(", ")));
+//        System.out.println(employeeList.stream().map(e -> e.getName()).collect(Collectors.joining(", ")));
 
 //        Find the employee(s) with the second-highest salary.
-        List<Employee> se = employeeList.stream().sorted(Collections.reverseOrder(Comparator.comparingDouble(Employee::getSalary))).skip(1).limit(1).collect(Collectors.toList());
+//        List<Employee> se = employeeList.stream().sorted(Collections.reverseOrder(Comparator.comparingDouble(Employee::getSalary))).skip(1).limit(1).collect(Collectors.toList());
 
-        System.out.println(se);
+//        System.out.println(se);
 //        Get a list of all employees grouped by the first letter of their names.
+//        System.out.println(employeeList.stream().collect(Collectors.groupingBy(e -> e.getName().charAt(0), Collectors.toList())));
 //        Create a Map where the key is the employee ID, and the value is their total number of projects.
+//        System.out.println(employeeList.stream().collect(Collectors.toMap(e -> e.getId(), emp -> emp.getProjects().size())));
 //        Calculate the average salary of employees in each department.
 
+//        System.out.println(employeeList.stream().collect(Collectors.groupingBy(Employee::getDept, Collectors.averagingDouble(Employee::getSalary))));
     }
 
     static class ProjectEmployeePair {
