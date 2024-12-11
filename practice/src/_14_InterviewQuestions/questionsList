@@ -79,3 +79,11 @@ Stream API operations (filter, map, collect).
 Use Optional to handle null values.
 Functional interfaces like Predicate, Function, and Consumer.
 Method references.
+
+11. Spring Boot Specific
+Multithreading in spring boot.
+Spring Security
+AOP Practice
+
+
+
