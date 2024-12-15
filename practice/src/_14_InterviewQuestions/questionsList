@@ -1,89 +1,107 @@
-1. Control Structures & Loops
-Print patterns: Pyramid pattern, Floyd’s triangle, Pascal’s triangle.
-Fibonacci series.
-Prime number check.
-Palindrome check (number and string).
-Factorial of a number.
-Armstrong number check.
-Reverse a number.
-Sum of digits of a number.
-Greatest Common Divisor (GCD) and Least Common Multiple (LCM).
-
-
-2. Arrays
-Find the largest and smallest element in an array.
-Sort an array (Bubble, Selection, Insertion sort).
-Find the second largest element in an array.
-Reverse an array.
-Find duplicates in an array.
-Rotate an array (left/right).
-Find the missing number in a given array.
-Merge two sorted arrays.
-
-
-3. Strings
-Reverse a string.
-Check if two strings are anagrams.
-Count vowels and consonants in a string.
-Find the first non-repeating character in a string.
-Check if a string is a palindrome.
-Remove duplicates from a string.
-Count occurrences of a character in a string.
-Check if a string contains only digits.
+A. Control Structures & Loops
+1.Print patterns: Pyramid pattern, Floyd’s triangle, Pascal’s triangle.
+2.Fibonacci series.
+3.Prime number check.
+4.Palindrome check (number and string).
+5.Factorial of a number.
+6.Armstrong number check.
+7.Reverse a number.
+8.Sum of digits of a number.
+9.Greatest Common Divisor (GCD) and Least Common Multiple (LCM).
 
 
 
-4. Object-Oriented Concepts
-Create a class and demonstrate inheritance, polymorphism, and encapsulation.
-Overload and override methods.
-Create and use an interface.
-Use abstract classes and methods.
-Implement a Singleton design pattern.
-Implement a simple factory design pattern.
+B. Arrays
+1.Find the largest and smallest element in an array.
+2.Sort an array (Bubble, Selection, Insertion sort).
+3.Find the second largest element in an array.
+4.Reverse an array.
+5.Find duplicates in an array.
+6.Rotate an array (left/right).
+7.Find the missing number in a given array.
+8.Merge two sorted arrays.
+9.Linear and Binary Search.
 
 
-5. Collections & Generics
-Use ArrayList, LinkedList, and HashMap.
-Sort a list using Collections.sort().
-Find duplicates in a list using HashSet.
-Iterate over a HashMap.
-Custom sorting with Comparator and Comparable.
 
-6. Recursion
-Find factorial using recursion.
-Fibonacci series using recursion.
-Tower of Hanoi problem.
-Reverse a string using recursion.
-Sum of digits using recursion.
+C. Strings
+1.Reverse a string.
+2.Check if two strings are anagrams.
+3.Count vowels and consonants in a string.
+4.Find the first non-repeating character in a string.
+5.Check if a string is a palindrome.
+6.Remove duplicates from a string.
+7.Count occurrences of a character in a string.
+8.Check if a string contains only digits.
+9.String Compression
+10.Parenthesis balance check
+11.Reverse words in string without reversing the string.
 
-7. File Handling
-Read from and write to a file.
-Count the number of words in a file.
-Copy content from one file to another.
 
-8. Exception Handling
-Handle checked and unchecked exceptions.
-Create custom exceptions.
-Use try-catch-finally blocks.
-Use multiple catch blocks.
 
-9. Multithreading
-Create a thread by extending Thread class and implementing Runnable interface.
-Use synchronization to avoid race conditions.
-Create a producer-consumer problem.
-Thread communication using wait() and notify().
+D. Object-Oriented Concepts
+1.Create a class and demonstrate inheritance, polymorphism, and encapsulation.
+2.Overload and override methods.
+3.Create and use an interface.
+4.Use abstract classes and methods.
+5.Implement a Singleton design pattern.
+6.Implement a simple factory design pattern.
 
-10. Java 8 Features
-Use lambda expressions.
-Stream API operations (filter, map, collect).
-Use Optional to handle null values.
-Functional interfaces like Predicate, Function, and Consumer.
-Method references.
 
-11. Spring Boot Specific
-Multithreading in spring boot.
-Spring Security
-AOP Practice
+E. Collections & Generics
+1.Use ArrayList, LinkedList, and HashMap.
+2.Sort a list using Collections.sort().
+3.Find duplicates in a list using HashSet.
+4.Iterate over a HashMap.
+5.Custom sorting with Comparator and Comparable.
+
+
+
+F. Recursion
+1.Find factorial using recursion.
+2.Fibonacci series using recursion.
+3.Tower of Hanoi problem.
+4.Reverse a string using recursion.
+5.Sum of digits using recursion.
+
+
+
+G. File Handling
+1.Read from and write to a file.
+2.Count the number of words in a file.
+3.Copy content from one file to another.
+
+
+
+H. Exception Handling
+1.Handle checked and unchecked exceptions.
+2.Create custom exceptions.
+3.Use try-catch-finally blocks.
+4.Use multiple catch blocks.
+
+
+
+I. Multithreading
+1.Create a thread by extending Thread class and implementing Runnable interface.
+2.Use synchronization to avoid race conditions.
+3.Create a producer-consumer problem.
+4.Thread communication using wait() and notify().
+
+
+
+J. Java 8 Features
+1.Use lambda expressions.
+2.Stream API operations (filter, map, collect).
+3.Use Optional to handle null values.
+4.Functional interfaces like Predicate, Function, and Consumer.
+5.Method references.
+
+
+
+K. Spring Boot Specific
+1.Multithreading in spring boot.
+2.Spring Security
+3.AOP Practice
 
 
 

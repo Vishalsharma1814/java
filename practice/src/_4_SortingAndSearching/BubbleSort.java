@@ -1,5 +1,6 @@
 package _4_SortingAndSearching;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BubbleSort {
@@ -29,6 +30,7 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    System.out.println(Arrays.toString(arr));
                 }
             }
         }

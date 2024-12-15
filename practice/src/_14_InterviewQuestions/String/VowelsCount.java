@@ -9,20 +9,20 @@ public class VowelsCount {
         String str = "a quick brown fox jumps over a lazy dog".toLowerCase();
 
         List<Character> vowels = new ArrayList<>();
-        vowels.addAll(Arrays.asList( 'a', 'e', 'i', 'o', 'u'));
+        vowels.addAll(Arrays.asList('a', 'e', 'i', 'o', 'u'));
 
-        int vowelsCount =0;
+        int vowelsCount = 0;
         int consonantCount = 0;
         char[] charArr = str.toCharArray();
         for (int i = 0; i < charArr.length; i++) {
-            if(charArr[i] != ' '){
-                if(vowels.contains(charArr[i])){
+            if (charArr[i] != ' ') {
+                if (vowels.contains(charArr[i])) {
                     vowelsCount++;
-                }else{
+                } else {
                     consonantCount++;
                 }
             }
         }
-        System.out.println(vowelsCount+" "+ consonantCount);
+        System.out.println(vowelsCount + " " + consonantCount);
     }
 }
